@@ -19,5 +19,19 @@ function createPackageConfig(barrels: string[]): any {
 export const config: any = {
   packages: Object.assign({
     // Add your custom SystemJS packages here.
+    app: {
+      format: 'register',
+      defaultExtension: 'js'
+    },
+    '@angular2-material/core': {
+      format: 'cjs',
+      defaultExtension: 'js',
+      main: 'core.js'
+    },
+    '@angular2-material/card': {
+      format: 'cjs',
+      defaultExtension: 'js',
+      main: 'card.js'
+    },
   }, createPackageConfig(barrels))
 };
